@@ -1,0 +1,7 @@
+### Maven stuff ###
+target/
+
+### Jetbrains stuff ###
+.idea/
+*.iml
+
