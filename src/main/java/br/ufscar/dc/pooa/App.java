@@ -10,7 +10,9 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        HeadlineCsvWriter csvWriter = new HeadlineCsvWriter.Builder().build();
+        HeadlineCsvWriter csvWriter = new HeadlineCsvWriter.Builder()
+                .setOutDir("./out/")
+                .build();
         List<NewsParser> parsers = new ArrayList<>();
         parsers.add(new BBCPortugueseParser());
 
