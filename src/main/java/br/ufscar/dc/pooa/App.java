@@ -3,6 +3,7 @@ package br.ufscar.dc.pooa;
 import br.ufscar.dc.pooa.csv.HeadlineCsvWriter;
 import br.ufscar.dc.pooa.model.Headline;
 import br.ufscar.dc.pooa.parser.BBCPortugueseParser;
+import br.ufscar.dc.pooa.parser.EstadaoParser;
 import br.ufscar.dc.pooa.parser.NewsParser;
 
 import java.util.ArrayList;
@@ -13,8 +14,10 @@ public class App {
         HeadlineCsvWriter csvWriter = new HeadlineCsvWriter.Builder()
                 .setOutDir("./out/")
                 .build();
+
         List<NewsParser> parsers = new ArrayList<>();
-        parsers.add(new BBCPortugueseParser());
+//        parsers.add(new BBCPortugueseParser());
+        parsers.add(new EstadaoParser());
 
         for (NewsParser parser : parsers) {
             List<Headline> headlines = parser.parse();
