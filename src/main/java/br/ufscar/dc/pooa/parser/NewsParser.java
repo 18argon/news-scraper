@@ -5,5 +5,5 @@ import br.ufscar.dc.pooa.model.Headline;
 import java.util.List;
 
 public interface NewsParser {
-    public List<Headline> parse();
+    List<Headline> parse();
 }
