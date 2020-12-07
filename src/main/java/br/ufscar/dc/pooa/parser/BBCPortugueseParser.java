@@ -11,6 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BBCPortugueseParser implements NewsParser {
+
+    @Override
+    public String getId() {
+        return "bcc-portuguese";
+    }
+
     @Override
     public List<Headline> parse() {
         ArrayList<Headline> headlines = new ArrayList<>();

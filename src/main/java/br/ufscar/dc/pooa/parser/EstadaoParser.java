@@ -11,6 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EstadaoParser implements NewsParser {
+
+    @Override
+    public String getId() {
+        return "estadao";
+    }
+
     @Override
     public List<Headline> parse() {
         ArrayList<Headline> headlines = new ArrayList<>();

@@ -16,7 +16,7 @@ public class App {
                 .build();
 
         List<NewsParser> parsers = new ArrayList<>();
-//        parsers.add(new BBCPortugueseParser());
+        parsers.add(new BBCPortugueseParser());
         parsers.add(new EstadaoParser());
 
         for (NewsParser parser : parsers) {
@@ -26,7 +26,7 @@ public class App {
             headlines.forEach(System.out::println);
 
             // Write csv file
-            csvWriter.write("bcc-pt", headlines);
+            csvWriter.write(parser.getId(), headlines);
         }
     }
 }
